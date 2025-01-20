@@ -1,0 +1,47 @@
+{
+  "id": "title",
+  "type": "SharedSlice",
+  "name": "Title",
+  "description": "Title",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Título da página"
+          }
+        },
+        "tag": {
+          "type": "Text",
+          "config": {
+            "label": "Tag",
+            "placeholder": "Tag da página"
+          }
+        },
+        "content": {
+          "type": "Text",
+          "config": {
+            "label": "Content",
+            "placeholder": "Texto descritivo da página"
+          }
+        },
+        "previouspage": {
+          "type": "Text",
+          "config": {
+            "label": "PreviousPage",
+            "placeholder": "Link para a página anterior"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

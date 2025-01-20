@@ -1,4 +1,5 @@
 import Advantages from "@/components/sections/advantages";
+import Article from "@/components/sections/article";
 import Content from "@/components/sections/content";
 import ContentReverse from "@/components/sections/contentReverse";
 import Cta from "@/components/sections/cta";
@@ -16,6 +17,7 @@ export default function About() {
       <Title data={data} />
       <ContentReverse data={data}/>
       <Content data={data}/>
+      <Article data={data}/>
       <Advantages data={data}/>
       <HowItWorks data={data}/>
       <Team data={data}/>

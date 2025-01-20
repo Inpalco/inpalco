@@ -1,0 +1,68 @@
+{
+  "id": "footer",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "Footer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "facebook": {
+          "type": "Text",
+          "config": {
+            "label": "Facebook",
+            "placeholder": "Link para o facebook"
+          }
+        },
+        "instagram": {
+          "type": "Text",
+          "config": {
+            "label": "Instagram",
+            "placeholder": "Link para o instagram"
+          }
+        },
+        "x_twitter": {
+          "type": "Text",
+          "config": {
+            "label": "X_twitter",
+            "placeholder": "Link para o X"
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": "E-mail do projeto"
+          }
+        },
+        "phone": {
+          "type": "Text",
+          "config": {
+            "label": "Phone",
+            "placeholder": "Telefone para contato"
+          }
+        },
+        "address": {
+          "type": "Text",
+          "config": {
+            "label": "Address",
+            "placeholder": "Endereço"
+          }
+        },
+        "copy": {
+          "type": "Text",
+          "config": {
+            "label": "Copy",
+            "placeholder": "Copyright do projeto"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

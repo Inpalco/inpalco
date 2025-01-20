@@ -1,0 +1,40 @@
+{
+  "id": "blog_overview",
+  "type": "SharedSlice",
+  "name": "BlogOverview",
+  "description": "BlogOverview",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Título da sessão"
+          }
+        },
+        "content": {
+          "type": "Text",
+          "config": {
+            "label": "Content",
+            "placeholder": "Texto descritivo da sessão"
+          }
+        },
+        "footer": {
+          "type": "Text",
+          "config": {
+            "label": "Footer",
+            "placeholder": "Texto do rodapé da sessão, que faz uma chamada para o blog"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

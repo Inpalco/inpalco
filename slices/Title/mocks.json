@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "shine",
+				"type": "Text"
+			},
+			"tag": {
+				"__TYPE__": "FieldContent",
+				"value": "eat",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"value": "correct",
+				"type": "Text"
+			},
+			"previouspage": {
+				"__TYPE__": "FieldContent",
+				"value": "exist",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

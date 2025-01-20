@@ -1,0 +1,44 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"facebook": {
+				"__TYPE__": "FieldContent",
+				"value": "observe",
+				"type": "Text"
+			},
+			"instagram": {
+				"__TYPE__": "FieldContent",
+				"value": "friendly",
+				"type": "Text"
+			},
+			"x_twitter": {
+				"__TYPE__": "FieldContent",
+				"value": "knife",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "ordinary",
+				"type": "Text"
+			},
+			"phone": {
+				"__TYPE__": "FieldContent",
+				"value": "finish",
+				"type": "Text"
+			},
+			"address": {
+				"__TYPE__": "FieldContent",
+				"value": "tide",
+				"type": "Text"
+			},
+			"copy": {
+				"__TYPE__": "FieldContent",
+				"value": "equally",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
