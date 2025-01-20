@@ -57,6 +57,13 @@
             },
             "thumbnails": []
           }
+        },
+        "tag": {
+          "type": "Text",
+          "config": {
+            "label": "Tag",
+            "placeholder": "Texto extra a ser mostrado na sessão"
+          }
         }
       },
       "items": {}

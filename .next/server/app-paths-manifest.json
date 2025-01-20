@@ -1,8 +1,9 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/slice-simulator/page": "app/slice-simulator/page.js",
-  "/about/page": "app/about/page.js",
   "/blog/page": "app/blog/page.js",
+  "/about/page": "app/about/page.js",
+  "/services/page": "app/services/page.js",
   "/services/[slug]/page": "app/services/[slug]/page.js",
-  "/services/page": "app/services/page.js"
+  "/page": "app/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js"
 }

@@ -272,6 +272,78 @@ export type ServicesDocument<Lang extends string = string> =
     Lang
   >;
 
+type ServicespageDocumentDataSlicesSlice =
+  | FooterSlice
+  | FaqSlice
+  | TestimonialsSlice
+  | CtaSlice
+  | AllServicesSlice
+  | ArticleSlice
+  | TitleSlice;
+
+/**
+ * Content for ServicesPage documents
+ */
+interface ServicespageDocumentData {
+  /**
+   * Slice Zone field in *ServicesPage*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servicespage.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<ServicespageDocumentDataSlicesSlice> /**
+   * Meta Title field in *ServicesPage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: servicespage.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *ServicesPage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: servicespage.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *ServicesPage*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servicespage.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * ServicesPage document from Prismic
+ *
+ * - **API ID**: `servicespage`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ServicespageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ServicespageDocumentData>,
+    "servicespage",
+    Lang
+  >;
+
 /**
  * Content for Testimonials documents
  */
@@ -331,6 +403,7 @@ export type AllDocumentTypes =
   | HomeDocument
   | PostsDocument
   | ServicesDocument
+  | ServicespageDocument
   | TestimonialsDocument;
 
 /**
@@ -942,6 +1015,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Tag field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Texto extra a ser mostrado na sessão
+   * - **API ID Path**: hero.default.primary.tag
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tag: prismic.KeyTextField;
 }
 
 /**
@@ -1551,6 +1634,9 @@ declare module "@prismicio/client" {
       PostsDocumentData,
       ServicesDocument,
       ServicesDocumentData,
+      ServicespageDocument,
+      ServicespageDocumentData,
+      ServicespageDocumentDataSlicesSlice,
       TestimonialsDocument,
       TestimonialsDocumentData,
       AllDocumentTypes,
