@@ -1,0 +1,65 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "uid": {
+          "type": "Number",
+          "config": {
+            "label": "uid",
+            "placeholder": "Código interno da página"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Título da sessão"
+          }
+        },
+        "content": {
+          "type": "Text",
+          "config": {
+            "label": "Content",
+            "placeholder": "Texto descritivo da sessão"
+          }
+        },
+        "link": {
+          "type": "Text",
+          "config": {
+            "label": "Link",
+            "placeholder": "Link no qual o botão de ação destinará o usuário"
+          }
+        },
+        "cta": {
+          "type": "Text",
+          "config": {
+            "label": "Cta",
+            "placeholder": "Chamada de ação que aparecerá no botão"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 1920,
+              "height": 1080
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -752,6 +752,9 @@ video {
 .gap-8 {
   gap: 2rem;
 }
+.gap-10 {
+  gap: 2.5rem;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -821,6 +824,9 @@ video {
 .p-8 {
   padding: 2rem;
 }
+.p-20 {
+  padding: 5rem;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -836,6 +842,22 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .text-center {
   text-align: center;
@@ -1082,6 +1104,14 @@ span {
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .md\:gap-20 {
+    gap: 5rem;
   }
 
   .md\:rounded-none {
