@@ -5,7 +5,38 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/Thumbs.db": true,
+        "slicemachine.config.json": true,
+        "README.md": true,
+        "prismicio.js": true,
+        "prismicio-types.d.ts": true,
+        "postcss.config.mjs": true,
+        "package.json": true,
+        "package-lock.json": true,
+        "jsconfig.json": true,
+        ".gitignore": true,
+        ".env.local": true,
+        "node_modules": true,
+        "data": true,
+        "app/favicon.ico": true,
+        "app/slice-simulator": true,
+        "next.config.mjs": true
     },
-    "hide-files.files": []
+    "hide-files.files": [
+        "slicemachine.config.json",
+        "README.md",
+        "prismicio.js",
+        "prismicio-types.d.ts",
+        "postcss.config.mjs",
+        "package.json",
+        "package-lock.json",
+        "jsconfig.json",
+        ".gitignore",
+        ".env.local",
+        "node_modules",
+        "data",
+        "app/favicon.ico",
+        "app/slice-simulator",
+        "next.config.mjs"
+    ]
 }

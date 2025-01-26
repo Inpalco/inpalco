@@ -5,6 +5,11 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type AboutDocumentDataSlicesSlice =
+  | HeroSlice
+  | BlogOverviewSlice
+  | TextImageSlice
+  | ServicesOverviewSlice
+  | AllServicesSlice
   | FooterSlice
   | FaqSlice
   | TestimonialsSlice
@@ -75,7 +80,154 @@ interface AboutDocumentData {
 export type AboutDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
 
+type FooterDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Facebook field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Link para o facebook
+   * - **API ID Path**: footer.facebook
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  facebook: prismic.KeyTextField;
+
+  /**
+   * Instagram field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Link para o instagram
+   * - **API ID Path**: footer.instagram
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  instagram: prismic.KeyTextField;
+
+  /**
+   * X (Twitter) field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Link para o twitter
+   * - **API ID Path**: footer.x_twitter
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  x_twitter: prismic.KeyTextField;
+
+  /**
+   * Email field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Phone field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.phone
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone: prismic.KeyTextField;
+
+  /**
+   * Address field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
+
+  /**
+   * Copy field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copy
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  copy: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Footer*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<FooterDocumentDataSlicesSlice> /**
+   * Meta Title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: footer.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: footer.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
 type HomeDocumentDataSlicesSlice =
+  | TitleSlice
+  | ArticleSlice
+  | TeamSlice
+  | AllServicesSlice
+  | HowItWorksSlice
   | FooterSlice
   | FaqSlice
   | TestimonialsSlice
@@ -218,6 +370,71 @@ interface PostsDocumentData {
 export type PostsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PostsDocumentData>, "posts", Lang>;
 
+type PrivacePolicyDocumentDataSlicesSlice = TitleSlice | ArticleSlice;
+
+/**
+ * Content for Privace_policy documents
+ */
+interface PrivacePolicyDocumentData {
+  /**
+   * Slice Zone field in *Privace_policy*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: privace_policy.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PrivacePolicyDocumentDataSlicesSlice> /**
+   * Meta Title field in *Privace_policy*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: privace_policy.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Privace_policy*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: privace_policy.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Privace_policy*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: privace_policy.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Privace_policy document from Prismic
+ *
+ * - **API ID**: `privace_policy`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PrivacePolicyDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<PrivacePolicyDocumentData>,
+    "privace_policy",
+    Lang
+  >;
+
 /**
  * Content for Services documents
  */
@@ -273,6 +490,14 @@ export type ServicesDocument<Lang extends string = string> =
   >;
 
 type ServicespageDocumentDataSlicesSlice =
+  | TextImageReverseSlice
+  | HeroSlice
+  | BlogOverviewSlice
+  | TextImageSlice
+  | TeamSlice
+  | ServicesOverviewSlice
+  | HowItWorksSlice
+  | AdvantagesSlice
   | FooterSlice
   | FaqSlice
   | TestimonialsSlice
@@ -344,6 +569,67 @@ export type ServicespageDocument<Lang extends string = string> =
     Lang
   >;
 
+type TermsDocumentDataSlicesSlice = ArticleSlice | TitleSlice;
+
+/**
+ * Content for Terms documents
+ */
+interface TermsDocumentData {
+  /**
+   * Slice Zone field in *Terms*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: terms.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<TermsDocumentDataSlicesSlice> /**
+   * Meta Title field in *Terms*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: terms.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Terms*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: terms.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Terms*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: terms.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Terms document from Prismic
+ *
+ * - **API ID**: `terms`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type TermsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<TermsDocumentData>, "terms", Lang>;
+
 /**
  * Content for Testimonials documents
  */
@@ -400,10 +686,13 @@ export type TestimonialsDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | AboutDocument
+  | FooterDocument
   | HomeDocument
   | PostsDocument
+  | PrivacePolicyDocument
   | ServicesDocument
   | ServicespageDocument
+  | TermsDocument
   | TestimonialsDocument;
 
 /**
@@ -1627,16 +1916,25 @@ declare module "@prismicio/client" {
       AboutDocument,
       AboutDocumentData,
       AboutDocumentDataSlicesSlice,
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataSlicesSlice,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
       PostsDocument,
       PostsDocumentData,
+      PrivacePolicyDocument,
+      PrivacePolicyDocumentData,
+      PrivacePolicyDocumentDataSlicesSlice,
       ServicesDocument,
       ServicesDocumentData,
       ServicespageDocument,
       ServicespageDocumentData,
       ServicespageDocumentDataSlicesSlice,
+      TermsDocument,
+      TermsDocumentData,
+      TermsDocumentDataSlicesSlice,
       TestimonialsDocument,
       TestimonialsDocumentData,
       AllDocumentTypes,

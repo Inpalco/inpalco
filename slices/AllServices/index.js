@@ -5,10 +5,8 @@
  */
 const AllServices = ({ slice }) => {
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
+    <section className="section" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+      <div className=""></div>
       Placeholder component for all_services (variation: {slice.variation})
       Slices
     </section>

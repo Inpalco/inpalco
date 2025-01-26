@@ -1,6 +1,8 @@
 import { Inter, Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
       >
         <Header/>
         {children}
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+import TitleSection from "@/components/TitleSection";
+
 /**
  * @typedef {import("@prismicio/client").Content.TitleSlice} TitleSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<TitleSlice>} TitleProps
@@ -9,7 +11,7 @@ const Title = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for title (variation: {slice.variation}) Slices
+      <TitleSection data={slice.primary} />
     </section>
   );
 };

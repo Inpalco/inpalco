@@ -1,3 +1,5 @@
+import ArticleSection from "@/components/articleSection";
+
 /**
  * @typedef {import("@prismicio/client").Content.ArticleSlice} ArticleSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<ArticleSlice>} ArticleProps
@@ -9,7 +11,7 @@ const Article = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for article (variation: {slice.variation}) Slices
+      <ArticleSection data={slice.primary} />
     </section>
   );
 };

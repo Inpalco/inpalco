@@ -11,6 +11,21 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "title": {
+              "type": "SharedSlice"
+            },
+            "article": {
+              "type": "SharedSlice"
+            },
+            "team": {
+              "type": "SharedSlice"
+            },
+            "all_services": {
+              "type": "SharedSlice"
+            },
+            "how_it_works": {
+              "type": "SharedSlice"
+            },
             "footer": {
               "type": "SharedSlice"
             },

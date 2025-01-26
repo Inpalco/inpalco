@@ -1,7 +1,5 @@
-import Advantages from "@/components/sections/advantages";
+import DefaultSection from "@/components/defaultSection";
 import Article from "@/components/sections/article";
-import Content from "@/components/sections/content";
-import ContentReverse from "@/components/sections/contentReverse";
 import Cta from "@/components/sections/cta";
 import Faq from "@/components/sections/faq";
 import Footer from "@/components/sections/footer";
@@ -14,7 +12,8 @@ import { data } from "@/data/data";
 export default function About() {
   return (
     <main className="flex flex-col w-full px-5 md:px-0">
-      <Title data={data} />
+      <DefaultSection/>
+      {/* <Title data={data} />
       <ContentReverse data={data}/>
       <Content data={data}/>
       <Article data={data}/>
@@ -24,7 +23,7 @@ export default function About() {
       <Cta data={data}/>
       <Testimonials data={data}/>
       <Faq data={data}/>
-      <Footer data={data}/>
+      <Footer data={data}/> */}
     </main>
   );
 }

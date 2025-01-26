@@ -1,30 +1,52 @@
-import Advantages from "@/components/sections/advantages";
-import Content from "@/components/sections/content";
-import ContentReverse from "@/components/sections/contentReverse";
-import Cta from "@/components/sections/cta";
-import Faq from "@/components/sections/faq";
-import Footer from "@/components/sections/footer";
-import Hero from "@/components/sections/hero";
-import LastPosts from "@/components/sections/lastPosts";
-import ServicesOverview from "@/components/sections/servicesOverview";
-import Testimonials from "@/components/sections/testimonials";
+import { isFilled, asImageSrc } from "@prismicio/client";
+import { SliceZone } from "@prismicio/react";
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+import Footer from "@/components/footer";
 
-import { data } from "@/data/data";
+export default async function Page() {
+  const client = createClient();
+  const page = await client.getSingle("home");
+  const posts = await client.getAllByType("posts");
+  const services = await client.getAllByType("services");
+  const testimonials = await client.getAllByType("testimonials");
+  const footer = await client.getSingle("footer");
 
-export default function Home() {
+  const contextItems = {
+    posts,
+    services,
+    testimonials
+  }  
 
   return (
-    <main className="flex flex-col w-full px-5 md:px-0">
-      <Hero data={data}/>
-      <ContentReverse data={data}/>
-      <Content data={data}/>
-      <ServicesOverview data={data}/>
-      <Advantages data = {data}/>
-      <Cta data={data}/>
-      <LastPosts data={data}/>
-      <Testimonials data={data}/>
-      <Faq data={data}/>
-      <Footer data={data}/>
+    <main>
+      <SliceZone 
+        slices={page.data.slices} 
+        components={components} 
+        context={contextItems}
+      />
+      <Footer data={footer.data} />
     </main>
-  );
+  )
+}
+
+export async function generateMetadata() {
+  const client = createClient();
+  const page = await client.getSingle("home");
+
+  return {
+    title: page.data.meta_title,
+    description: page.data.meta_description,
+    openGraph: {
+      title: isFilled.keyText(page.data.meta_title)
+        ? page.data.meta_title
+        : undefined,
+      description: isFilled.keyText(page.data.meta_description)
+        ? page.data.meta_description
+        : undefined,
+      images: isFilled.image(page.data.meta_image)
+        ? [asImageSrc(page.data.meta_image)]
+        : undefined,
+    },
+  };
 }

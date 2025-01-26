@@ -11,6 +11,21 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "blog_overview": {
+              "type": "SharedSlice"
+            },
+            "text_image": {
+              "type": "SharedSlice"
+            },
+            "services_overview": {
+              "type": "SharedSlice"
+            },
+            "all_services": {
+              "type": "SharedSlice"
+            },
             "footer": {
               "type": "SharedSlice"
             },

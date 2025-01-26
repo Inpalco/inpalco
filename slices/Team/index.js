@@ -1,3 +1,5 @@
+import TeamSection from "@/components/teamSection";
+
 /**
  * @typedef {import("@prismicio/client").Content.TeamSlice} TeamSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<TeamSlice>} TeamProps
@@ -9,7 +11,7 @@ const Team = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for team (variation: {slice.variation}) Slices
+      <TeamSection data={slice.primary} />
     </section>
   );
 };

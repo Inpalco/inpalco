@@ -1,17 +1,20 @@
+import AdvantagesSection from "@/components/advantagesSection";
 /**
  * @typedef {import("@prismicio/client").Content.AdvantagesSlice} AdvantagesSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<AdvantagesSlice>} AdvantagesProps
  * @param {AdvantagesProps}
  */
-const Advantages = ({ slice }) => {
+
+const ServicesOverview = ({ slice }) => {
+
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for advantages (variation: {slice.variation}) Slices
+      <AdvantagesSection data={slice.primary} />
     </section>
   );
 };
 
-export default Advantages;
+export default ServicesOverview;

@@ -1,3 +1,5 @@
+import HowItWOrksSection from "@/components/howItWorksSection";
+
 /**
  * @typedef {import("@prismicio/client").Content.HowItWorksSlice} HowItWorksSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<HowItWorksSlice>} HowItWorksProps
@@ -9,8 +11,7 @@ const HowItWorks = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for how_it_works (variation: {slice.variation})
-      Slices
+      <HowItWOrksSection data={slice.primary} />
     </section>
   );
 };

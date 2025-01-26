@@ -1,17 +1,17 @@
+import BlogOverviewSection from "@/components/blogOverviewSection";
+
 /**
  * @typedef {import("@prismicio/client").Content.BlogOverviewSlice} BlogOverviewSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<BlogOverviewSlice>} BlogOverviewProps
  * @param {BlogOverviewProps}
  */
-const BlogOverview = ({ slice }) => {
+
+const BlogOverview = ({ slice, context }) => {
+
+  const {posts} = context;
+
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
-      Placeholder component for blog_overview (variation: {slice.variation})
-      Slices
-    </section>
+    <BlogOverviewSection data={slice.primary} posts={posts} />
   );
 };
 

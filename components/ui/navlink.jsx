@@ -11,6 +11,7 @@ export default function NavLink({ href, text, isActive, onClick }) {
           transition
           hover:text-purple-600
           hover:bg-purple-100
+          hover:scale-105
           ${isActive ? 'text-purple-600 bg-purple-100' : 'text-slate-900'}
         `}
         onClick={onClick}
