@@ -298,6 +298,8 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
+type PostsDocumentDataSlicesSlice = never;
+
 /**
  * Content for Posts documents
  */
@@ -356,6 +358,17 @@ interface PostsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   date: prismic.DateField;
+
+  /**
+   * `slices` field in *Posts*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: posts.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PostsDocumentDataSlicesSlice>;
 }
 
 /**
@@ -1924,6 +1937,7 @@ declare module "@prismicio/client" {
       HomeDocumentDataSlicesSlice,
       PostsDocument,
       PostsDocumentData,
+      PostsDocumentDataSlicesSlice,
       PrivacePolicyDocument,
       PrivacePolicyDocumentData,
       PrivacePolicyDocumentDataSlicesSlice,

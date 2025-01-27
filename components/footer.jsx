@@ -1,3 +1,4 @@
+'use client'
 import { FacebookLogo, InstagramLogo, XLogo } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 
@@ -33,7 +34,7 @@ export default function Footer({data}) {
                 <div className="flex flex-col gap-4 flex-1 items-end">
                     <Link className="py-4 px-4 rounded-full text-center text-purple-500 transition hover:bg-orange-100 hover:text-orange-500 hover:scale-105 bg-purple-100 w-full md:w-max" href={"/terms"}>Termos de Uso</Link>
                     <Link className="py-4 px-4 rounded-full text-center text-purple-500 transition hover:bg-orange-100 hover:text-orange-500 hover:scale-105 bg-purple-100 w-full md:w-max" href={"/policy"}>Política de Privacidade</Link>
-                    <Link className="py-4 px-4 rounded-full text-center text-purple-500 transition hover:bg-orange-100 hover:text-orange-500 hover:scale-105 w-full md:w-max" href={"/#"}>Ir para o topo da página</Link>
+                    <Link className="py-4 px-4 rounded-full text-center text-purple-500 transition hover:bg-orange-100 hover:text-orange-500 hover:scale-105 w-full md:w-max" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });}} href={"#"}>Ir para o topo da página</Link>
                 </div>
             </div>
         </div>

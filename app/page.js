@@ -18,8 +18,12 @@ export default async function Page() {
     testimonials
   }  
 
+  const scrollToTop = () => {
+    document.getElementById('topo').scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
-    <main>
+    <main id="topo">
       <SliceZone 
         slices={page.data.slices} 
         components={components} 

@@ -34,13 +34,13 @@ export default function BlogOverviewSection({data, posts}) {
                                 <span>{post.data.author}</span>
                                 <span>{post.data.date}</span>
                             </div>
-                            <Link className="text-purple-500 font-medium text-lg text-center w-full transition hover:text-orange-500 md:w-max hover:scale-105" href={`/blog/${post.id}`}>Ler mais</Link>
+                            <Link className="text-purple-500 font-medium text-lg text-center w-full transition hover:text-orange-500 md:w-max hover:scale-105" href={`/blog/${post.uid}`}>Ler mais</Link>
                         </div>
                     ))}
                 </div>                
                 <div className="flex items-center text-center flex-col gap-10 md:text-left md:flex-row">
                     <p className="secondary flex-1 mt-6">{data.footer}</p>
-                    <Link className="text-white font-medium text-lg bg-purple-500 text-center py-4 px-8 rounded-full w-full transition md:mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href="/blog">Acessar o blog</Link>
+                    <Link className="text-white font-medium text-lg bg-purple-500 text-center py-4 px-8 rounded-full w-full transition md:mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href="/blog">Veja todos os posts</Link>
                 </div>
             </div>
         </div>

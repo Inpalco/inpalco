@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import NavLink from "./ui/navlink";
-import Button from "./ui/button";
 import { X, List } from "@phosphor-icons/react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -38,6 +37,7 @@ export default function Header() {
       justify-center
       my-0
       mx-auto
+      z-40
     ">
       <nav className="
           flex
@@ -48,6 +48,7 @@ export default function Header() {
           m-5
           px-5
           justify-between
+          z-40
         ">
 
         {/* LOGO */}
@@ -101,7 +102,7 @@ export default function Header() {
           </ul>
 
           {/* CTA */}
-          <Link className="text-white font-medium text-lg bg-purple-500 text-center py-4 px-8 rounded-full w-full transition mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href="/contact">Entre em contato</Link>
+          <Link className="text-white font-medium text-lg bg-purple-500 text-center py-4 px-8 rounded-full w-full transition mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" target="_blank" href="https://wa.me/55996698296?text=Ol%C3%A1%2C%20estou%20interessado%20nos%20servi%C3%A7os%20da%20InPalco">Entre em contato</Link>
         </div>
         
         {/* OPEN MOBILE MENU BUTTON */}

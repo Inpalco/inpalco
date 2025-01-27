@@ -1,24 +1,53 @@
-import AllServices from "@/components/sections/allServices";
-import ContentReverse from "@/components/sections/contentReverse";
-import Cta from "@/components/sections/cta";
-import Faq from "@/components/sections/faq";
-import Footer from "@/components/sections/footer";
-import HowItWorks from "@/components/sections/howItWorks";
-import Testimonials from "@/components/sections/testimonials";
-import Title from "@/components/sections/title";
-import { data } from "@/data/data";
+import { isFilled, asImageSrc } from "@prismicio/client";
+import { SliceZone } from "@prismicio/react";
 
-export default function Services() {
-  return (
-    <main className="flex flex-col w-full px-5 md:px-0">
-      <Title data={data} />
-      <ContentReverse data={data}/>
-      <AllServices data={data}/>
-      <HowItWorks data={data}/>
-      <Cta data={data}/>
-      <Testimonials data={data}/>
-      <Faq data={data}/>
-      <Footer data={data}/>
-    </main>
-  );
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+import Footer from "@/components/footer";
+
+export default async function Page() {
+  const client = createClient();
+  const page = await client.getSingle("servicespage");
+    const posts = await client.getAllByType("posts");
+    const services = await client.getAllByType("services");
+    const testimonials = await client.getAllByType("testimonials");
+    const footer = await client.getSingle("footer");
+  
+    const contextItems = {
+      posts,
+      services,
+      testimonials
+    } 
+  
+    return (
+      <main id="topo">
+        <SliceZone 
+          slices={page.data.slices} 
+          components={components} 
+          context={contextItems}
+        />
+        <Footer data={footer.data} />
+      </main>
+    )
+}
+
+export async function generateMetadata() {
+  const client = createClient();
+  const page = await client.getSingle("servicespage");
+
+  return {
+    title: page.data.meta_title,
+    description: page.data.meta_description,
+    openGraph: {
+      title: isFilled.keyText(page.data.meta_title)
+        ? page.data.meta_title
+        : undefined,
+      description: isFilled.keyText(page.data.meta_description)
+        ? page.data.meta_description
+        : undefined,
+      images: isFilled.image(page.data.meta_image)
+        ? [asImageSrc(page.data.meta_image)]
+        : undefined,
+    },
+  };
 }

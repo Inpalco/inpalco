@@ -49,6 +49,10 @@
           "label": "Date",
           "placeholder": "Data de criação do post"
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone"
       }
     }
   }

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: theme('colors.slate.50');
 }
@@ -46,7 +50,7 @@ span {
 }
 
 .animation {
-  animation: float 6s ease-in-out infinite;
+  animation: float 15s ease-in-out infinite;
 }
 
 @keyframes float {

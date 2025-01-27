@@ -12,7 +12,7 @@ export default function HowItWOrksSection({data}) {
                 </div>
                 <div className="w-full grid grid-cols-1 gap-6 items-stretch justify-items-center md:grid-cols-5">
                     {data.steps.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center text-center justify-center gap-6 p-8 rounded-2xl transition hover:bg-purple-100 hover:scale-105 hover:border-purple-400 hover:drop-shadow-lg border border-slate-50 hover:text-purple-500 hover:border-purple-500">
+                        <div key={index} className="flex flex-col items-center text-center justify-center gap-6 p-2 rounded-2xl transition hover:bg-purple-100 hover:scale-105 hover:drop-shadow-lg border border-slate-50 hover:text-purple-500 hover:border-purple-500">
                             <div className="w-14 h-14 rounded-full flex items-center justify-center border border-purple-500">
                                 <span className="font-medium text-xl text-purple-500">{item.step}</span>
                             </div>
