@@ -5,7 +5,7 @@ import NavLink from "./ui/navlink";
 import { X, List } from "@phosphor-icons/react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import Logo from "@/public/logo.svg";
+import Logo from "../public/Logo.svg";
 
 export default function Header() {
   const menus = [
