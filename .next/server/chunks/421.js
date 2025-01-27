@@ -1,0 +1,1 @@
+"use strict";exports.id=421,exports.ids=[421],exports.modules={57421:(e,s,a)=>{a.r(s),a.d(s,{default:()=>t});var i=a(62740);let t=({slice:e})=>(0,i.jsxs)("section",{className:"section","data-slice-type":e.slice_type,"data-slice-variation":e.variation,children:[(0,i.jsx)("div",{className:""}),"Placeholder component for all_services (variation: ",e.variation,") Slices"]})}};

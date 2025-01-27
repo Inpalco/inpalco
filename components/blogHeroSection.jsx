@@ -10,7 +10,6 @@ export default function BlogHeroSection({data}) {
     };
 
     const mostRecentPost = getMostRecentPost(data);
-    console.log(mostRecentPost);
     
     // Função para pegar os primeiros 100 caracteres do conteúdo do post
     const getExcerpt = (content) => {

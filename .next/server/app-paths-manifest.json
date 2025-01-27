@@ -1,8 +1,16 @@
 {
+  "/api/exit-preview/route": "app/api/exit-preview/route.js",
+  "/api/preview/route": "app/api/preview/route.js",
+  "/api/revalidate/route": "app/api/revalidate/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
-  "/blog/[slug]/page": "app/blog/[slug]/page.js",
-  "/blog/page": "app/blog/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/services/page": "app/services/page.js",
+  "/policy/page": "app/policy/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/page": "app/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/slice-simulator/page": "app/slice-simulator/page.js"
 }

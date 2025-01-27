@@ -23,8 +23,6 @@ export default async function Blog({params}) {
     const posts = await client.getAllByType("posts");
     const footer = await client.getSingle("footer");
 
-    console.log(posts);
-
     return (
         <main id="topo" className="flex flex-col w-full px-5 md:px-0">
             <div className="flex w-full items-center justify-center pt-10">
