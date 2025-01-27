@@ -1,1 +1,0 @@
-"use strict";exports.id=785,exports.ids=[785],exports.modules={94785:(e,t,i)=>{i.r(t),i.d(t,{default:()=>o});var a=i(62740);let o=({slice:e})=>(0,a.jsxs)("section",{"data-slice-type":e.slice_type,"data-slice-variation":e.variation,children:["Placeholder component for footer (variation: ",e.variation,") Slices"]})}};
