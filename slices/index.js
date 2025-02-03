@@ -7,6 +7,7 @@ export const components = {
   all_services: dynamic(() => import("./AllServices")),
   article: dynamic(() => import("./Article")),
   blog_overview: dynamic(() => import("./BlogOverview")),
+  contact: dynamic(() => import("./Contact")),
   cta: dynamic(() => import("./Cta")),
   faq: dynamic(() => import("./Faq")),
   footer: dynamic(() => import("./Footer")),

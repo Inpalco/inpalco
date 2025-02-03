@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "exist",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"value": "north",
+				"type": "Text"
+			},
+			"whatsapp": {
+				"__TYPE__": "FieldContent",
+				"value": "against",
+				"type": "Text"
+			},
+			"instagram": {
+				"__TYPE__": "FieldContent",
+				"value": "silver",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

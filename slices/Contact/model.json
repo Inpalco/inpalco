@@ -1,0 +1,47 @@
+{
+  "id": "contact",
+  "type": "SharedSlice",
+  "name": "Contact",
+  "description": "Contact",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Título da sessão"
+          }
+        },
+        "content": {
+          "type": "Text",
+          "config": {
+            "label": "Content",
+            "placeholder": "Texto descritivo da sessão"
+          }
+        },
+        "whatsapp": {
+          "type": "Text",
+          "config": {
+            "label": "Whatsapp",
+            "placeholder": "Whatsapp"
+          }
+        },
+        "instagram": {
+          "type": "Text",
+          "config": {
+            "label": "Instagram",
+            "placeholder": "Instagram"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
