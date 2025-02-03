@@ -22,14 +22,14 @@ export default function PostsSection({data}) {
                                 alt={item.data.image.alt} 
                                 width={960} 
                                 height={480} 
-                                className="object-cover w-full md:h-[16rem] rounded-3xl" />
+                                className="object-cover w-full h-40 md:h-[16rem] rounded-3xl" />
                             <h3>{item.data.title}</h3>
                             <p className="secondary">{getExcerpt(item.data.content)}...</p>
                             <div className="flex items-center gap-4">
                                 <span>{item.data.author}</span>
                                 <span>{item.data.date}</span>
                             </div>
-                            <Link className="text-purple-500 font-medium text-lg text-center w-full transition hover:text-orange-500 md:w-max hover:scale-105" href={`/blog/${item.uid}`}>Ler mais</Link>
+                            <Link className="text-purple-500 font-medium text-lg text-center w-full transition hover:text-orange-500 md:w-max hover:scale-105 md:bg-none md:border-none bg-purple-50 border border-purple-500 p-4 rounded-full hover:border-orange-500" href={`/blog/${item.uid}`}>Ler mais</Link>
                         </div>
                     ))}
                 </div>                

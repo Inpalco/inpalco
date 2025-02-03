@@ -22,9 +22,9 @@ export default function BlogHeroSection({data}) {
 
     return (
         <div className="flex w-full items-center justify-center md:pt-12 md:pb-20">
-            <div className="flex flex-col-reverse items-center w-full md:max-w-7xl gap-10 px-4 md:gap-20 md:flex-row">
+            <div className="flex flex-col items-center w-full md:max-w-7xl gap-10 px-4 md:gap-20 md:flex-row">
                 <Image 
-                    className="object-cover flex-1 w-full md:max-w-xl min-h-[20rem] h-[30rem] rounded-3xl"
+                    className="object-cover flex-1 w-full md:max-w-xl max-h-52 md:min-h-[20rem] md:h-[30rem] rounded-3xl"
                     src={mostRecentPost.data.image.url} 
                     width={960}
                     height={480}

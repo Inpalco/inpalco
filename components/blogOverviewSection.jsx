@@ -21,20 +21,20 @@ export default function BlogOverviewSection({data, posts}) {
                 </div>
                 <div className="w-full grid grid-cols-1 gap-6 items-stretch justify-items-center md:grid-cols-3">
                     {posts.slice(0, 3).map(post => (
-                        <div key={post.id} className="flex flex-col gap-4 w-full">
+                        <div key={post.id} className="flex flex-col gap-4 w-full mb-6 md:mb-0">
                             <Image 
                                 src={post.data.image.url} 
                                 alt={post.data.image.alt} 
                                 width={960} 
                                 height={480} 
-                                className="object-cover w-full md:h-[16rem] rounded-3xl" />
+                                className="object-cover w-full h-40 md:h-[16rem] rounded-3xl" />
                             <h3>{post.data.title}</h3>
                             <p className="secondary">{getExcerpt(post.data.content)}...</p>
                             <div className="flex items-center gap-4">
                                 <span>{post.data.author}</span>
                                 <span>{post.data.date}</span>
                             </div>
-                            <Link className="text-purple-500 font-medium text-lg text-center w-full transition hover:text-orange-500 md:w-max hover:scale-105" href={`/blog/${post.uid}`}>Ler mais</Link>
+                            <Link className="text-purple-500 font-medium text-lg text-center w-full transition hover:text-orange-500 md:w-max hover:scale-105 md:bg-none md:border-none bg-purple-50 border border-purple-500 p-4 rounded-full hover:border-orange-500" href={`/blog/${post.uid}`}>Ler mais</Link>
                         </div>
                     ))}
                 </div>                
