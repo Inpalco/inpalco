@@ -5,6 +5,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import WhatsappBaloon from "@/components/whatsappBaloon";
 import VLibrasScript from "@/components/vlibrasScript";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         {children}
         <PrismicPreview repositoryName={repositoryName} />
         <VLibrasScript/>
+        <SpeedInsights />
       </body>
     </html>
   );
