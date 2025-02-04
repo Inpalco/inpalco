@@ -1,6 +1,5 @@
 {
+  "/api/send-email/route": "app/api/send-email/route.js",
   "/contact/page": "app/contact/page.js",
-  "/about/page": "app/about/page.js",
-  "/page": "app/page.js",
-  "/blog/page": "app/blog/page.js"
+  "/page": "app/page.js"
 }
