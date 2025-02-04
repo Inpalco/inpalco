@@ -17,11 +17,11 @@ export default function Accordion(props) {
         onClick={toggleAccordion}
         className="cursor-pointer flex items-center justify-between transition hover:bg-purple-100 p-4 rounded-full"
       >
-        <h3 className="text-purple-500">{props.title}</h3>
+        <h3 className="text-purple-700">{props.title}</h3>
         <CaretDown
           weight="bold"
           size={24}
-          className={`text-purple-500 transform transition-transform ${
+          className={`text-purple-700 transform transition-transform ${
             isOpen ? "-rotate-180" : ""
           }`}
         />

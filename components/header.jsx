@@ -53,10 +53,12 @@ export default function Header() {
 
         {/* LOGO */}
         <Link href={"/"}>
-          <Image src={Logo} 
+          <Image 
+            src={Logo} 
             width={140} 
             height={50} 
-            alt="Logo da In-Palco" />
+            alt="Logo da In-Palco"
+            className="w-48" />
         </Link>
 
         {/* NAVBAR-LINKS */}
@@ -102,13 +104,13 @@ export default function Header() {
           </ul>
 
           {/* CTA */}
-          <Link className="text-white font-medium text-lg bg-purple-500 text-center py-4 px-8 rounded-full w-full transition mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href="/contact">Entre em contato</Link>
+          <Link className="text-white font-medium text-lg bg-purple-700 text-center py-4 px-8 rounded-full w-full transition mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href="/contact">Entre em contato</Link>
         </div>
         
         {/* OPEN MOBILE MENU BUTTON */}
         <button 
           className="
-            text-purple-500
+            text-purple-700
             block
             md:hidden
           " 

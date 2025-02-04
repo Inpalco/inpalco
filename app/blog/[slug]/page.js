@@ -58,7 +58,7 @@ export default async function Blog({params}) {
                                     <span>{post.data.author}</span>
                                     <span>{post.data.date}</span>
                                 </div>
-                                <Link className="text-purple-500 font-medium text-lg text-left w-full transition hover:text-orange-500 md:w-max hover:scale-105" href={`/blog/${post.uid}`}>Ler mais</Link>
+                                <Link className="text-purple-700 font-medium text-lg text-left w-full transition hover:text-orange-500 md:w-max hover:scale-105" href={`/blog/${post.uid}`}>Ler mais</Link>
                             </div>
                         ))}
                     </div>                

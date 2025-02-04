@@ -13,7 +13,7 @@ export default function HeroSection({data}) {
                     <p className="secondary">{data.content}</p>
                     {
                         data.link &&
-                        <Link className="text-white font-medium text-lg bg-purple-500 text-center py-4 px-8 rounded-full w-full transition mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href={`${data.link}`}>{data.cta}</Link>
+                        <Link className="text-white font-medium text-lg bg-purple-700 text-center py-4 px-8 rounded-full w-full transition mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href={`${data.link}`}>{data.cta}</Link>
                     }
                 </div>
                 <div className="relative my-10 md:m-0">

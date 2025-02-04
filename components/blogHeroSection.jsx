@@ -32,7 +32,7 @@ export default function BlogHeroSection({data}) {
                 <div className="flex flex-col gap-4 flex-1">
                     <h1>{mostRecentPost.data.title}</h1>
                     <p className="secondary">{getExcerpt(mostRecentPost.data.content)}...</p>
-                    <Link className="text-white font-medium text-lg bg-purple-500 text-center py-4 px-8 rounded-full w-full transition mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href={`/blog/${mostRecentPost.uid}`}>Ler post</Link>
+                    <Link className="text-white font-medium text-lg bg-purple-700 text-center py-4 px-8 rounded-full w-full transition mt-2 hover:bg-orange-500 md:w-max hover:scale-105 hover:drop-shadow-lg" href={`/blog/${mostRecentPost.uid}`}>Ler post</Link>
                 </div>
             </div>
         </div>

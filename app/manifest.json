@@ -1,0 +1,16 @@
+{
+    "name": "In-Palco",
+    "short_name": "In-Palco",
+    "description": "Transforme seus eventos em experiências acessíveis e inclusivas.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#f8fafc",
+    "icons": [
+      {
+        "src": "/icon.svg",
+        "sizes": "any",
+        "type": "image/x-icon"
+      }
+    ]
+  }

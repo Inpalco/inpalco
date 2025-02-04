@@ -29,7 +29,7 @@ export default function PostsSection({data}) {
                                 <span>{item.data.author}</span>
                                 <span>{item.data.date}</span>
                             </div>
-                            <Link className="text-purple-500 font-medium text-lg text-center w-full transition hover:text-orange-500 md:w-max hover:scale-105 md:bg-none md:border-none bg-purple-50 border border-purple-500 p-4 rounded-full hover:border-orange-500" href={`/blog/${item.uid}`}>Ler mais</Link>
+                            <Link className="text-purple-700 font-medium text-lg text-center w-full transition hover:text-orange-500 md:w-max hover:scale-105 md:bg-none md:border-none bg-purple-50 border border-purple-500 p-4 rounded-full hover:border-orange-500" href={`/blog/${item.uid}`}>Ler mais</Link>
                         </div>
                     ))}
                 </div>                
