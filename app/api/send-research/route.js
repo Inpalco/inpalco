@@ -17,11 +17,11 @@ export async function POST(req) {
   
   async function enviarParaGoogleSheets(nome, email, mensagem) {
     // Caminho para o arquivo de credenciais (assumindo que ele está na raiz do projeto)
-    const credentialsPath = path.join(process.cwd(), process.env.GOOGLE_SPREADSHEETS_CREDENTIALS);
+    const credentials = JSON.parse(process.env.GOOGLE_SPREADSHEETS_CREDENTIALS);
   
     // Cria a autenticação com a API do Google
     const auth = new google.auth.GoogleAuth({
-      keyFile: credentialsPath, // Caminho para o arquivo JSON das credenciais
+      credentials, // Caminho para o arquivo JSON das credenciais
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
   
