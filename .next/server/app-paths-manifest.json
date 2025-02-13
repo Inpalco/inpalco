@@ -1,6 +1,6 @@
 {
   "/manifest.json/route": "app/manifest.json/route.js",
-  "/icon.svg/route": "app/icon.svg/route.js",
+  "/api/send-research/route": "app/api/send-research/route.js",
   "/page": "app/page.js",
   "/research/page": "app/research/page.js",
   "/blog/page": "app/blog/page.js"

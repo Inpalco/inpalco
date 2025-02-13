@@ -17,7 +17,7 @@ export async function POST(req) {
   
   async function enviarParaGoogleSheets(nome, email, mensagem) {
     // Caminho para o arquivo de credenciais (assumindo que ele está na raiz do projeto)
-    const credentialsPath = path.join(process.cwd(), 'credenciaisInpalcoPlanilhas.json');
+    const credentialsPath = path.join(process.cwd(), process.env.GOOGLE_SPREADSHEETS_CREDENTIALS);
   
     // Cria a autenticação com a API do Google
     const auth = new google.auth.GoogleAuth({
