@@ -13,18 +13,22 @@ export default function Header() {
       href: "/",
       text: "Inicio"
     },
-    {
-      href: "/about",
-      text: "Sobre"
-    },
-    {
-      href: "/services",
-      text: "Serviços"
-    },
+    // {
+    //   href: "/about",
+    //   text: "Sobre"
+    // },
+    // {
+    //   href: "/services",
+    //   text: "Serviços"
+    // },
     {
       href: "/blog",
       text: "Blog"
     },
+    // {
+    //   href: "/research",
+    //   text: "Pesquisa"
+    // },
   ];
 
   const pathName = usePathname();
