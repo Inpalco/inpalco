@@ -1,4 +1,4 @@
-// File: C:\Users\darla\OneDrive\Documentos\Projetos\InPalco\Web\github\inpalco\app\page.js
+// File: C:\Users\darla\OneDrive\Documentos\GitHub\in-palco-frontend\inpalco\app\page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

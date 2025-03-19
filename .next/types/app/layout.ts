@@ -1,4 +1,4 @@
-// File: C:\Users\darla\OneDrive\Documentos\Projetos\InPalco\Web\github\inpalco\app\layout.js
+// File: C:\Users\darla\OneDrive\Documentos\GitHub\in-palco-frontend\inpalco\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
