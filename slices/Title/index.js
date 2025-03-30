@@ -6,6 +6,8 @@ import TitleSection from "@/components/TitleSection";
  * @param {TitleProps}
  */
 const Title = ({ slice }) => {
+  console.log(slice.primary);
+  
   return (
     <section
       data-slice-type={slice.slice_type}

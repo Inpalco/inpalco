@@ -46,7 +46,6 @@ span {
   font-weight: normal;
   font-size: 1rem;
   line-height: auto;
-  color: theme('colors.purple.800');
 }
 
 .animation {
@@ -79,4 +78,87 @@ span {
   100% {
     transform: translatey(0px);
   }
+}
+
+.ff-partial span,  .ff-message span {
+  color: theme('colors.purple.700');
+}
+
+.ff-partial, .ff-message {
+  background-color: theme('colors.purple.100') !important;
+  color: theme('colors.purple.700');
+  padding: 1rem 0.5rem 1rem 1rem !important;
+  border-radius: 1rem !important;
+  text-align: left !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  justify-content: space-between !important;
+}
+
+.ff-partial span:last-child, .ff-message span:last-child {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+}
+
+.ff-partial span a,  .ff-message span a {
+  color: theme('colors.purple.700');
+  text-decoration: none;
+  background-color: theme('colors.purple.200');
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  transition: 0.1s ease-out;
+}
+
+.ff-partial span a:hover,  .ff-message span a:hover {
+  color: theme('colors.white');
+  background-color: theme('colors.purple.500');
+}
+
+.ff-button-bar button {
+  color: whitw !important;
+  background-color: theme('colors.purple.500') !important;
+  border: none !important;
+  border-radius: 5rem !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+}
+
+.ff-button-bar button:hover {
+  background-color: theme('colors.orange.500') !important;
+}
+
+.ff-button-bar a.ff-powered-img {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.ff-form-check {
+  border-radius: 5rem !important;
+}
+
+.rest-btn span, .rest-btn-lg span, .rest-btn-secondary span,  .ff-back span {
+  color: white !important;
+}
+
+.ff-section h3 {
+  display: none;
+}
+
+#ff-sec-ending .ff-secfields p{
+  position: relative;
+  font-size: 1.5rem;
+  width: 100% !important;
+}
+
+#ff-sec-ending .ff-secfields p::after{
+  content: 'Clique em "Enviar" para finalizar o formulário!';
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 340px;
 }

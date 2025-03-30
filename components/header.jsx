@@ -25,10 +25,11 @@ export default function Header() {
       href: "/blog",
       text: "Blog"
     },
-    // {
-    //   href: "/research",
-    //   text: "Pesquisa"
-    // },
+    {
+      href: "/surveys",
+      text: "Pesquisas",
+      isNew: true
+    },
   ];
 
   const pathName = usePathname();
@@ -103,7 +104,8 @@ export default function Header() {
                 href={menu.href}
                 onClick={() => setOpenMenu(false)}
                 text={menu.text} 
-                isActive={pathName == menu.href} />
+                isActive={pathName == menu.href}
+                isNew={menu.isNew} />
             ))}
           </ul>
 
