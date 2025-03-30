@@ -504,6 +504,9 @@ video {
 .relative {
   position: relative;
 }
+.inset-0 {
+  inset: 0px;
+}
 .-bottom-10 {
   bottom: -2.5rem;
 }
@@ -533,21 +536,6 @@ video {
 }
 .top-14 {
   top: 3.5rem;
-}
-.-right-4 {
-  right: -1rem;
-}
-.top-2 {
-  top: 0.5rem;
-}
-.top-1 {
-  top: 0.25rem;
-}
-.top-3 {
-  top: 0.75rem;
-}
-.right-1 {
-  right: 0.25rem;
 }
 .z-40 {
   z-index: 40;
@@ -610,10 +598,6 @@ video {
   width: 0.75rem;
   height: 0.75rem;
 }
-.size-2 {
-  width: 0.5rem;
-  height: 0.5rem;
-}
 .h-14 {
   height: 3.5rem;
 }
@@ -631,9 +615,6 @@ video {
 }
 .h-\[30rem\] {
   height: 30rem;
-}
-.h-2 {
-  height: 0.5rem;
 }
 .h-full {
   height: 100%;
@@ -665,9 +646,6 @@ video {
 .w-max {
   width: max-content;
 }
-.w-2 {
-  width: 0.5rem;
-}
 .min-w-8 {
   min-width: 2rem;
 }
@@ -693,15 +671,6 @@ video {
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-@keyframes pulse {
-
-  50% {
-    opacity: .5;
-  }
-}
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
 @keyframes ping {
 
   75%, 100% {
@@ -711,6 +680,15 @@ video {
 }
 .animate-ping {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -772,9 +750,6 @@ video {
 .gap-8 {
   gap: 2rem;
 }
-.gap-3 {
-  gap: 0.75rem;
-}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -789,6 +764,9 @@ video {
 }
 .rounded-full {
   border-radius: 9999px;
+}
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 .border {
   border-width: 1px;
@@ -808,6 +786,14 @@ video {
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+}
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1));
+}
+.bg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
 }
 .bg-purple-100 {
   --tw-bg-opacity: 1;
@@ -832,26 +818,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
-}
-.bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
-}
-.bg-sky-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(56 189 248 / var(--tw-bg-opacity, 1));
-}
-.bg-sky-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity, 1));
-}
-.bg-orange-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1));
 }
 .object-cover {
   object-fit: cover;
@@ -931,6 +897,14 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .font-medium {
   font-weight: 500;

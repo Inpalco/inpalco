@@ -1,8 +1,6 @@
 {
   "/manifest.json/route": "app/manifest.json/route.js",
-  "/services/page": "app/services/page.js",
-  "/surveys/page": "app/surveys/page.js",
+  "/page": "app/page.js",
   "/surveys/survey-one/page": "app/surveys/survey-one/page.js",
-  "/surveys/finish-survey/page": "app/surveys/finish-survey/page.js",
-  "/page": "app/page.js"
+  "/surveys/page": "app/surveys/page.js"
 }
