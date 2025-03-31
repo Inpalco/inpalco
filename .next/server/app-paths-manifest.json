@@ -1,6 +1,8 @@
 {
+  "/icon.svg/route": "app/icon.svg/route.js",
   "/manifest.json/route": "app/manifest.json/route.js",
   "/page": "app/page.js",
-  "/surveys/survey-one/page": "app/surveys/survey-one/page.js",
-  "/surveys/page": "app/surveys/page.js"
+  "/surveys/page": "app/surveys/page.js",
+  "/surveys/survey-two/page": "app/surveys/survey-two/page.js",
+  "/surveys/survey-one/page": "app/surveys/survey-one/page.js"
 }

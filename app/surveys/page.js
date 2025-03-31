@@ -27,13 +27,22 @@ export default async function Surveys() {
                     </div>
                     <div className="w-full grid grid-cols-1 gap-6 items-stretch justify-items-center md:grid-cols-3">
                     {/* ITEMS */}
-
+                        {/* PESQUISA 1 */}
                         <div className="flex flex-row items-start justify-center gap-6 p-8 bg-white border border-slate-300 rounded-2xl transition  hover:scale-105 hover:border-purple-400 group hover:drop-shadow-lg">
                             <ListMagnifyingGlass size={32} className="text-purple-500 min-w-8"/>
                             <div className="flex flex-col gap-6">
                                 <h3>A Presença de Pessoas com Deficiência nas Redes Sociais</h3>
                                 <p className="secondary">Esta pesquisa tem como objetivo compreender a experiência de pessoas com deficiência nas redes sociais, identificando desafios de acessibilidade e formas de tornar esses espaços mais inclusivos.</p>
                                 <Link className="py-4 px-4 rounded-full text-center text-purple-700 transition hover:bg-purple-500 hover:text-white  bg-purple-100 w-full md:w-max" href={"/surveys/survey-one"}>Responder pesquisa</Link>
+                            </div>
+                        </div>
+                        {/* PESQUISA 2 */}
+                        <div className="flex flex-row items-start justify-center gap-6 p-8 bg-white border border-slate-300 rounded-2xl transition  hover:scale-105 hover:border-purple-400 group hover:drop-shadow-lg">
+                            <ListMagnifyingGlass size={32} className="text-purple-500 min-w-8"/>
+                            <div className="flex flex-col gap-6">
+                                <h3>(Teste) A Presença de Pessoas com Deficiência nas Redes Sociais</h3>
+                                <p className="secondary">Esta pesquisa tem como objetivo compreender a experiência de pessoas com deficiência nas redes sociais, identificando desafios de acessibilidade e formas de tornar esses espaços mais inclusivos.</p>
+                                <Link className="py-4 px-4 rounded-full text-center text-purple-700 transition hover:bg-purple-500 hover:text-white  bg-purple-100 w-full md:w-max" href={"/surveys/survey-two"}>Responder pesquisa</Link>
                             </div>
                         </div>
 

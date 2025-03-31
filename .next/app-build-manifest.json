@@ -20,6 +20,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/surveys/survey-one/page.js"
+    ],
+    "/surveys/survey-two/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/surveys/survey-two/page.js"
     ]
   }
 }
